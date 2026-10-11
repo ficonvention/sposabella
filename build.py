@@ -7,6 +7,9 @@ EMAIL = "ssabato111@gmail.com"
 SITE = dict(
     name="Sposabella", domain="www.sposabella.co.kr",
     brand_main="SPOSABELLA", brand_sub="스포사벨라 · Since 1995",
+    brand_html='<a class="brand logo-banner" href="index.html"><img src="images/2649b2_97b69e4ccb8b4fca8bc3402ad45b65a0.jpg" alt="Sposabella" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'inline\'"><span class="brand-main" style="display:none">SPOSABELLA</span></a>',
+    header_cls=" header-banner",
+    fonts="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+KR:wght@300;400;500;700&display=swap",
     desc="스포사벨라 — 1995년부터 이어온 인터내셔널 브라이덜 브랜드. 웨딩드레스, 파티드레스, 연주복, 맞춤정장. 서울 서초 아크로비스타.",
     og="2649b2_05fe499776144d0fb7aadeecd679acff~mv2.jpeg",
     address="112-4, Acrovista Lobby, 1685-3 Seocho-dong, Seocho-gu, Seoul (서울 서초구 서초동 1685-3 아크로비스타 로비 112-4)",
@@ -26,12 +29,58 @@ SITE = dict(
 )
 
 THEME = """:root{
-  --ink:#2b2626; --ink-soft:#6b6262; --line:#e9e1dc; --paper:#fffdfb; --cream:#f7f1ec;
-  --gold:#c9a98c; --gold-deep:#a3785a; --sky:#daeef3;
-  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
-  --wrap:1180px; --header-h:76px;
+  --ink:#2f2e2e; --ink-soft:#a0a09f; --line:#e6e6e4; --paper:#ffffff; --cream:#eef0e4;
+  --gold:#efabae; --gold-deep:#d98a8e; --sky:#daeef3;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Nunito Sans","Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+  --wrap:980px; --header-h:200px;
 }
-.site-footer{background:#2b2626}
+body{font-weight:300}
+/* static banner header */
+.site-header.header-banner{position:static;height:auto;background:#fff;border:0;backdrop-filter:none}
+.site-header.header-banner .wrap{flex-direction:column;height:auto;align-items:stretch;padding:0}
+.logo-banner{display:block;text-align:center;padding:12px 0 0}
+.logo-banner img{width:100%;max-width:980px;height:auto;display:block;margin:0 auto}
+.logo-banner .brand-main{font-size:3rem;letter-spacing:.2em;padding:2rem 0}
+.header-banner .site-nav{position:relative;z-index:2}
+.header-banner .site-nav ul{justify-content:flex-start;gap:2.2rem;padding:.6rem 24px}
+.header-banner .site-nav a{font-size:14px;letter-spacing:.02em;text-transform:none;color:var(--ink);font-weight:300}
+.header-banner .site-nav li.active > a{color:var(--gold-deep)}
+.header-banner .site-nav li > a::after{display:none}
+.header-banner .site-nav .sub{background:#fff}
+.hero,.page-hero{margin-top:0}
+.hero{min-height:560px;max-width:980px;margin:0 auto}
+.hero::before{background:rgba(0,0,0,.18)}
+.hero h1{font-family:var(--sans);font-weight:200;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.08em}
+.hero .eyebrow{color:#fff}
+.section{padding:3.5rem 0}
+.section.alt{background:var(--ink);color:var(--ink-soft)}
+.section.alt h2,.section.alt h3{color:#fff;font-weight:300}
+.section.alt .eyebrow{color:var(--gold)}
+.section.alt .sub,.section.alt p{color:var(--ink-soft)}
+.section.alt .btn{border-color:#fff;color:#fff}.section.alt .btn:hover{background:#fff;color:var(--ink)}
+h2{font-family:var(--sans);font-weight:300;font-size:28px;letter-spacing:.04em;text-transform:uppercase}
+h3{font-family:var(--sans);font-weight:300;font-size:18px;letter-spacing:.04em}
+.eyebrow{color:var(--gold-deep);font-size:.72rem;letter-spacing:.3em}
+.btn{border-color:var(--ink);color:var(--ink);font-weight:300}.btn:hover{background:var(--ink);color:#fff}
+.btn-light{background:#fff;border-color:#fff;color:var(--ink)}
+.cta-band{background:#242323;color:#a0a09f}.cta-band h2{color:#fff;font-weight:300}.cta-band p{color:#a0a09f}
+.cta-band .btn-light{background:transparent;border-color:#fff;color:#fff}.cta-band .btn-light:hover{background:#fff;color:#242323}
+.cta-band .btn-outline{border-color:var(--gold);color:var(--gold)}
+.page-hero{min-height:320px;max-width:980px;margin:0 auto}
+.page-hero h1{font-family:var(--sans);font-weight:200;letter-spacing:.1em;font-size:clamp(2rem,5vw,3rem)}
+.page-hero .lead{font-family:var(--serif)}
+.site-footer{background:#242323;color:#a0a09f;font-weight:300}
+.f-brand{font-family:var(--sans);font-weight:300;letter-spacing:.2em}
+.timeline{border-left-color:var(--gold)}.timeline li::before{background:var(--gold)}
+.contact-card{background:var(--cream);border-left-color:var(--gold)}
+.menu-card{border-top-color:var(--gold)}
+@media (max-width:820px){
+  .header-banner .site-nav{position:static;transform:none;background:transparent;padding:0;overflow:visible}
+  .header-banner .site-nav ul{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:.2rem 1rem;padding:.5rem 12px}
+  .header-banner .site-nav li > a{border:0;padding:.4rem .1rem;font-size:13px}
+  .header-banner .site-nav .sub{display:none}
+  .header-banner .nav-toggle{display:none}
+}
 """
 
 HERO = "2649b2_05fe499776144d0fb7aadeecd679acff~mv2.jpeg"
@@ -214,7 +263,7 @@ contact = f"""
 """
 
 PAGES = {
-    "index.html": ("Home", home, True),
+    "index.html": ("Home", home, False),
     "about.html": ("About us", about, False),
     "wedding-dress.html": ("Wedding Dress", dress, False),
     "celebrity.html": ("Celebrity", celeb, False),
