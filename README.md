@@ -1,6 +1,6 @@
 # Sposabella website
 
-Static site for www.sposabella.co.kr (GitHub Pages).
+Static site for sposabella.kr (GitHub Pages).
 
 - Edit `build.py` and run `python3 build.py` to regenerate, or edit the `.html` files directly.
 - Styles: `css/style.css` · Script: `js/main.js`

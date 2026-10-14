@@ -5,7 +5,7 @@ from sitegen import *
 
 EMAIL = "ssabato111@gmail.com"
 SITE = dict(
-    name="Sposabella", domain="www.sposabella.co.kr",
+    name="Sposabella", domain="sposabella.kr",
     brand_main="SPOSABELLA", brand_sub="스포사벨라 · Since 1995",
     brand_html='<a class="brand logo-banner" href="index.html"><img src="images/2649b2_97b69e4ccb8b4fca8bc3402ad45b65a0.jpg" alt="Sposabella" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'inline\'"><span class="brand-main" style="display:none">SPOSABELLA</span></a>',
     header_cls=" header-banner",
