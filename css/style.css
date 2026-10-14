@@ -9,7 +9,7 @@ body{font-weight:300}
 .site-header.header-banner{position:static;height:auto;background:#fff;border:0;backdrop-filter:none}
 .site-header.header-banner .wrap{flex-direction:column;height:auto;align-items:stretch;padding:0}
 .logo-banner{display:block;text-align:center;padding:12px 0 0}
-.logo-banner img{width:100%;max-width:980px;height:auto;display:block;margin:0 auto}
+.logo-banner img{width:100%;max-width:700px;height:auto;display:block;margin:0 auto}
 .logo-banner .brand-main{font-size:3rem;letter-spacing:.2em;padding:2rem 0}
 .header-banner .site-nav{position:relative;z-index:2}
 .header-banner .site-nav ul{justify-content:flex-start;gap:2.2rem;padding:.6rem 24px}
